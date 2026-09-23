@@ -19,7 +19,6 @@ export const clinicConfig = {
   hospital: {
     name: "Promhex Multispeciality Hospital",
     department: "The Physiotherapy Department",
-    affiliatedPhysio: "physio1" as "physio1" | "physio2",
   },
 
   team: {
