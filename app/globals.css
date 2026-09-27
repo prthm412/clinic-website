@@ -33,11 +33,13 @@ body {
   color: var(--color-text);
 }
 
-a {
-  color: var(--color-primary);
-}
-a:hover {
-  color: var(--color-primary-dark);
+@layer base {
+  a {
+    color: var(--color-primary);
+  }
+  a:hover {
+    color: var(--color-primary-dark);
+  }
 }
 
 input:focus,
