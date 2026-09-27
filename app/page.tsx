@@ -51,9 +51,9 @@ export default function Home() {
               href={`/about#${clinicConfig.team.physio1.slug}`}
               className="group text-center"
             >
-              <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full border-2 border-border">
+              <div className="relative mx-auto h-56 w-56 overflow-hidden rounded-full border-2 border-border">
                 <Image
-                  src="/images/team/physio1.jpeg"
+                  src={clinicConfig.team.physio1.image}
                   alt={clinicConfig.team.physio1.name}
                   fill
                   className="object-cover"
@@ -71,9 +71,9 @@ export default function Home() {
               href={`/about#${clinicConfig.team.physio2.slug}`}
               className="group text-center"
             >
-              <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full border-2 border-border">
+              <div className="relative mx-auto h-56 w-56 overflow-hidden rounded-full border-2 border-border">
                 <Image
-                  src="/images/team/physio2.jpeg"
+                  src={clinicConfig.team.physio2.image}
                   alt={clinicConfig.team.physio2.name}
                   fill
                   className="object-cover"

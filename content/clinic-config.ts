@@ -24,6 +24,7 @@ export const clinicConfig = {
   team: {
     physio1: {
       slug: "ashish-shrivastava",
+      image: "/images/team/physio1.jpeg",
       name: "Dr. Ashish Shrivastava",
       university: "BPT (IPH), University of Delhi",
       qualifications: "MPT (Orthopaedics)",
@@ -33,6 +34,7 @@ export const clinicConfig = {
     },
     physio2: {
       slug: "rohit-dhyani",
+      image: "/images/team/physio2.jpeg",
       name: "Dr. Rohit Dhyani",
       university: "BPT (IPH), University of Delhi",
       qualifications: "MPT (Orthopaedics)",
