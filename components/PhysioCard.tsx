@@ -1,4 +1,5 @@
 type Physio = {
+  slug: string;
   name: string;
   university: string;
   qualifications: string;
@@ -9,7 +10,7 @@ type Physio = {
 
 export default function PhysioCard({ physio }: { physio: Physio }) {
   return (
-    <div className="rounded-2xl border border-border bg-white p-8">
+    <div id={physio.slug} className="scroll-mt-24 rounded-2xl border border-border bg-white p-8">
       <p className="text-xl font-semibold text-text">{physio.name}</p>
       <p className="mt-1 text-sm font-medium text-primary">
         {physio.qualifications}

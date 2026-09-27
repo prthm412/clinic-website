@@ -5,6 +5,7 @@ import { homeFaqs } from "@/content/faq";
 import { buildWhatsappLink } from "@/lib/whatsapp";
 import ServiceCard from "@/components/ServiceCard";
 import FaqAccordionItem from "@/components/FaqAccordionItem";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -38,6 +39,53 @@ export default function Home() {
             >
               WhatsApp Us
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet the team preview */}
+      <section className="bg-bg">
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
+          <div className="grid gap-6 sm:grid-cols-2 max-w-3xl mx-auto">
+            <Link
+              href={`/about#${clinicConfig.team.physio1.slug}`}
+              className="group text-center"
+            >
+              <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full border-2 border-border">
+                <Image
+                  src="/images/team/physio1.jpeg"
+                  alt={clinicConfig.team.physio1.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="mt-4 font-semibold text-text group-hover:text-primary-dark">
+                {clinicConfig.team.physio1.name}
+              </p>
+              <p className="text-sm text-muted">
+                {clinicConfig.team.physio1.qualifications}
+              </p>
+            </Link>
+
+            <Link
+              href={`/about#${clinicConfig.team.physio2.slug}`}
+              className="group text-center"
+            >
+              <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full border-2 border-border">
+                <Image
+                  src="/images/team/physio2.jpeg"
+                  alt={clinicConfig.team.physio2.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <p className="mt-4 font-semibold text-text group-hover:text-primary-dark">
+                {clinicConfig.team.physio2.name}
+              </p>
+              <p className="text-sm text-muted">
+                {clinicConfig.team.physio2.qualifications}
+              </p>
+            </Link>
           </div>
         </div>
       </section>
