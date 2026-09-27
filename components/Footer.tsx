@@ -76,7 +76,7 @@ export default function Footer() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-muted">
           <p>
             © {currentYear} {clinicConfig.name}. All rights reserved.
-            {clinicConfig.trademarkNumber !== "7917813" ? ` TM: ${clinicConfig.trademarkNumber}` : ""}
+            Trademark Number: {clinicConfig.trademarkNumber}
           </p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-primary">Privacy Policy</Link>
