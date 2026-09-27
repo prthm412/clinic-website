@@ -1,7 +1,7 @@
 export const clinicConfig = {
   name: "The2Physios",
   tagline: "Two physios, one clear plan for your recovery.",
-  trademarkNumber: "7917813", // Trademark registration number
+  trademarkNumber: 7917813, // Trademark registration number
 
   contact: {
     address:
