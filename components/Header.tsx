@@ -30,7 +30,7 @@ export default function Header() {
 
   return (
     <>
-    <header className="sticky top-0 z-50 bg-bg/20 backdrop-blur border-b border-border">
+    <header className="bg-bg/75 backdrop-blur border-b border-border">
       <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         <Link
           href="/"
@@ -99,7 +99,7 @@ export default function Header() {
     </header>
     {/* Mobile menu overlay */}
       {menuOpen && (
-        <div className="md:hidden fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-border bg-bg px-4 sm:px-6 py-6 flex flex-col gap-4">          {navLinks.map((link) => (
+        <div className="md:hidden fixed inset-x-0 top-[100px] bottom-0 z-40 overflow-y-auto border-t border-border bg-bg px-4 sm:px-6 py-6 flex flex-col gap-4">          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}

@@ -21,7 +21,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${manrope.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col"><TopBar /><Header/>{children}<Footer/><StickyWhatsapp /></body>
+      <body className="min-h-full flex flex-col">
+        <div className="sticky top-0 z-50">
+          <TopBar /><Header/>
+        </div>
+        {children}<Footer/><StickyWhatsapp /></body>
     </html>
   );
 }

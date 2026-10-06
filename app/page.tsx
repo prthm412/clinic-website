@@ -15,34 +15,62 @@ export default function Home() {
       <section className="bg-bg">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid gap-12 lg:grid-cols-2 lg:items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-primary-dark">
-              {clinicConfig.tagline}
-            </h1>
-            <p className="mt-6 text-base sm:text-lg text-muted max-w-xl mx-auto lg:mx-0">
-              Hands-on physiotherapy from two qualified physios who take the
-              time to explain what's going on, and how you'll get
-              better. Based at {clinicConfig.hospital.name}, Greater Noida.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <Link
-                href="/book"
-                className="w-full sm:w-auto rounded-full bg-accent px-8 py-3.5 text-base font-semibold text-white hover:bg-accent-dark transition-colors"
-              >
-                Book Appointment
-              </Link>
-              <a
-                href={buildWhatsappLink(
-                  clinicConfig.contact.whatsappNumber,
-                  "Hi, I'd like to book a physiotherapy appointment."
-                )}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto rounded-full border border-primary px-8 py-3.5 text-base font-semibold text-primary hover:bg-bg-alt transition-colors"
-              >
-                WhatsApp Us
-              </a>
+          <p className="inline-flex items-center gap-2 rounded-full bg-bg-alt px-4 py-1.5 text-sm font-medium text-primary-dark">
+            <span className="h-2 w-2 rounded-full bg-success" />
+            Physiotherapists at {clinicConfig.hospital.name}
+          </p>
+
+          <h1 className="mt-5 text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-primary-dark">
+            {clinicConfig.tagline}
+          </h1>
+          <p className="mt-6 text-base sm:text-lg text-muted max-w-xl mx-auto lg:mx-0">
+            Hands-on physiotherapy from two qualified physios who take the
+            time to explain what's going on, and how you'll get
+            better. Based at {clinicConfig.hospital.name}, Greater Noida.
+          </p>
+
+          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <Link
+              href="/book"
+              className="w-full sm:w-auto rounded-full bg-accent px-8 py-3.5 text-base font-semibold text-white hover:bg-accent-dark transition-colors"
+            >
+              Book Appointment
+            </Link>
+            <a
+              href={buildWhatsappLink(
+                clinicConfig.contact.whatsappNumber,
+                "Hi, I'd like to book a physiotherapy appointment."
+              )}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto rounded-full border border-primary px-8 py-3.5 text-base font-semibold text-primary hover:bg-bg-alt transition-colors"
+            >
+              WhatsApp Us
+            </a>
+          </div>
+
+          <a
+            href={`tel:${clinicConfig.contact.phone}`}
+            className="mt-5 inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-primary"
+          >
+            Or call us directly: <span className="font-semibold text-text">{clinicConfig.contact.phone}</span>
+          </a>
+
+          <div className="mt-10 grid grid-cols-3 gap-4 border-t border-border pt-8">
+            <div>
+              <p className="text-sm font-semibold text-text">In-Clinic</p>
+              <p className="mt-1 text-xs text-muted">At Promhex, Greater Noida</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-text">Home Visits</p>
+              <p className="mt-1 text-xs text-muted">Available on request</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-text">Quick Response</p>
+              <p className="mt-1 text-xs text-muted">Call or WhatsApp</p>
             </div>
           </div>
+        </div>
 
           <div className="relative mx-auto w-full max-w-md lg:max-w-none aspect-[4/5] overflow-hidden rounded-3xl border border-border">
             <Image
