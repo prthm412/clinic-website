@@ -162,40 +162,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why choose us */}
+      {/* What to expect */}
       <section className="bg-bg">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <div className="text-center">
             <h2 className="text-2xl sm:text-3xl font-bold text-text">
-              Why Patients Choose {clinicConfig.name}
+              What to Expect
             </h2>
+            <p className="mt-3 text-muted">
+              From your first message to your first session.
+            </p>
           </div>
-          <div className="mt-10 grid gap-8 sm:grid-cols-3">
-            <div className="text-center">
-              <p className="text-3xl font-bold text-primary">10+ Yrs</p>
-              <p className="mt-2 text-sm text-muted">
-                Experience each, across both physiotherapists
-              </p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-primary">
-                {clinicConfig.hours.display}
-              </p>
-              <p className="mt-2 text-sm text-muted">
-                {clinicConfig.hours.note ?? "Open every day"}
-              </p>
-            </div>
-            <div className="text-center">
-              <p className="text-3xl font-bold text-primary">Home Visits</p>
-              <p className="mt-2 text-sm text-muted">
-                Full sessions available at your home when needed
-              </p>
-            </div>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                step: "01",
+                title: "Reach Out",
+                desc: "Call, WhatsApp, or fill out our booking form.",
+              },
+              {
+                step: "02",
+                title: "We Confirm",
+                desc: "We'll call or WhatsApp you to confirm a time that works.",
+              },
+              {
+                step: "03",
+                title: "First Session",
+                desc: "A full assessment, followed by hands-on treatment and a clear plan.",
+              },
+              {
+                step: "04",
+                title: "Ongoing Care",
+                desc: "Follow-up sessions tailored to your recovery, at your pace.",
+              },
+            ].map((item) => (
+              <div
+                key={item.step}
+                className="rounded-2xl border border-border bg-bg-alt p-6"
+              >
+                <p className="text-3xl font-bold text-primary/30">{item.step}</p>
+                <p className="mt-3 text-base font-semibold text-text">
+                  {item.title}
+                </p>
+                <p className="mt-2 text-sm text-muted">{item.desc}</p>
+              </div>
+            ))}
           </div>
           <p className="mx-auto mt-10 max-w-2xl text-center text-sm text-muted">
             Both physiotherapists at {clinicConfig.name} also practice at{" "}
-            {clinicConfig.hospital.name}, bringing hospital-grade assessment
-            and treatment to an independent clinic setting.
+            {clinicConfig.hospital.name}, bringing hospital-grade assessment and
+            treatment to an independent clinic setting.
           </p>
         </div>
       </section>
