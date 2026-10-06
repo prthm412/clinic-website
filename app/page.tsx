@@ -6,42 +6,59 @@ import { buildWhatsappLink } from "@/lib/whatsapp";
 import ServiceCard from "@/components/ServiceCard";
 import FaqAccordionItem from "@/components/FaqAccordionItem";
 import Image from "next/image";
+import ServicesMarquee from "@/components/ServicesMarquee";
 
 export default function Home() {
   return (
     <main className="flex-1">
       {/* Hero */}
       <section className="bg-bg">
-        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center">
-          <h1 className="mx-auto max-w-3xl text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-primary-dark">
-            {clinicConfig.tagline}
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-base sm:text-lg text-muted">
-            Hands-on physiotherapy from two qualified physios who take the
-            time to explain what's going on, and how you&apos;ll get
-            better. Based at {clinicConfig.hospital.name}, Greater Noida.
-          </p>
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              href="/book"
-              className="w-full sm:w-auto rounded-full bg-accent px-8 py-3.5 text-base font-semibold text-white hover:bg-accent-dark transition-colors"
-            >
-              Book Appointment
-            </Link>
-            <a
-              href={buildWhatsappLink(
-                clinicConfig.contact.whatsappNumber,
-                "Hi, I'd like to book a physiotherapy appointment."
-              )}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto rounded-full border border-primary px-8 py-3.5 text-base font-semibold text-primary hover:bg-bg-alt transition-colors"
-            >
-              WhatsApp Us
-            </a>
+        <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 py-16 sm:py-24 grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div className="text-center lg:text-left">
+            <h1 className="text-[clamp(2rem,5vw,3.5rem)] font-bold leading-tight text-primary-dark">
+              {clinicConfig.tagline}
+            </h1>
+            <p className="mt-6 text-base sm:text-lg text-muted max-w-xl mx-auto lg:mx-0">
+              Hands-on physiotherapy from two qualified physios who take the
+              time to explain what's going on, and how you'll get
+              better. Based at {clinicConfig.hospital.name}, Greater Noida.
+            </p>
+            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+              <Link
+                href="/book"
+                className="w-full sm:w-auto rounded-full bg-accent px-8 py-3.5 text-base font-semibold text-white hover:bg-accent-dark transition-colors"
+              >
+                Book Appointment
+              </Link>
+              <a
+                href={buildWhatsappLink(
+                  clinicConfig.contact.whatsappNumber,
+                  "Hi, I'd like to book a physiotherapy appointment."
+                )}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto rounded-full border border-primary px-8 py-3.5 text-base font-semibold text-primary hover:bg-bg-alt transition-colors"
+              >
+                WhatsApp Us
+              </a>
+            </div>
+          </div>
+
+          <div className="relative mx-auto w-full max-w-md lg:max-w-none aspect-[4/5] overflow-hidden rounded-3xl border border-border">
+            <Image
+              src="/images/cabin.jpeg"
+              alt={`${clinicConfig.name} clinic room`}
+              fill
+              priority
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
+
+    <div className="mb-12 sm:mb-16">
+      <ServicesMarquee />
+    </div>
 
       {/* Meet the team preview */}
       <section className="bg-bg">
