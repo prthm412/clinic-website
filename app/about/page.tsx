@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { clinicConfig } from "@/content/clinic-config";
 import PhysioCard from "@/components/PhysioCard";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -17,6 +18,20 @@ export default function AboutPage() {
             one-size-fits-all routine. Both bring over a decade of hands-on
             clinical experience to every session.
           </p>
+        </div>
+      </section>
+
+      {/* Clinic space */}
+      <section className="bg-bg">
+        <div className="mx-auto max-w-[900px] px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
+          <div className="relative mx-auto aspect-[16/10] w-full overflow-hidden rounded-3xl border border-border">
+            <Image
+              src="/images/cabin.jpeg"
+              alt={`${clinicConfig.name} treatment room`}
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
