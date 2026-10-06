@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Manrope, Stick } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import TopBar from "@/components/TopBar";
+import StickyWhatsapp from "@/components/StickyWhatsapp";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${manrope.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col"><TopBar /><Header/>{children}<Footer/></body>
+      <body className="min-h-full flex flex-col"><TopBar /><Header/>{children}<Footer/><StickyWhatsapp /></body>
     </html>
   );
 }
