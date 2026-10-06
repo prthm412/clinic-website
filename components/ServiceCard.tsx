@@ -14,6 +14,16 @@ export default function ServiceCard({ service }: { service: Service }) {
         {service.name}
       </h3>
       <p className="mt-2 text-sm text-muted">{service.homeDesc}</p>
+      <div className="mt-4 flex flex-wrap gap-1.5">
+        {service.tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full bg-bg-alt px-2.5 py-1 text-xs text-primary-dark"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
     </Link>
   );
 }

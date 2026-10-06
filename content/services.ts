@@ -5,6 +5,7 @@ export type Service = {
   homeDesc: string; // short, for the home page grid
   desc: string; // longer, for the services page
   who: string;
+  tags: string[];
 };
 
 export const services: Service[] = [
@@ -16,6 +17,7 @@ export const services: Service[] = [
       "Get back to your sport safely, with a plan built around your training goals.",
     desc: "Rehabilitation programs built around your sport, from acute injury through to full return-to-play.",
     who: "Athletes and active individuals recovering from strains, sprains, or overuse injuries.",
+    tags: ["Ligament Sprains", "Muscle Strains", "Return-to-Play"],
   },
   {
     slug: "post-surgery-recovery",
@@ -25,6 +27,7 @@ export const services: Service[] = [
       "Structured rehabilitation to rebuild strength and range of motion after surgery.",
     desc: "Structured, staged rehabilitation to safely rebuild strength, mobility, and confidence after surgery.",
     who: "Anyone recovering from orthopedic, ligament, or joint replacement surgery.",
+    tags: ["Joint Replacement Recovery", "Ligament Surgery", "Mobility Rebuilding"],
   },
   {
     slug: "back-neck-pain",
@@ -33,6 +36,7 @@ export const services: Service[] = [
     homeDesc: "Targeted, hands-on treatment for acute and chronic spinal pain.",
     desc: "Hands-on treatment and targeted exercise for acute and chronic spinal pain, posture issues, and joint stiffness.",
     who: "Anyone with ongoing back, neck, or joint pain affecting daily life.",
+    tags: ["Sciatica", "Slipped Disc", "Posture-Related Pain"],
   },
   {
     slug: "neuro-rehab",
@@ -41,6 +45,7 @@ export const services: Service[] = [
     homeDesc: "Movement-focused therapy for neurological conditions and recovery.",
     desc: "Movement-focused therapy to rebuild function after stroke, nerve injury, or neurological conditions.",
     who: "Patients recovering from stroke, nerve damage, or living with a neurological condition.",
+    tags: ["Stroke Recovery", "Nerve Injury", "Balance & Coordination"],
   },
   {
     slug: "geriatric-care",
@@ -49,6 +54,7 @@ export const services: Service[] = [
     homeDesc: "Gentle, effective care focused on mobility, balance, and independence.",
     desc: "Gentle, effective therapy focused on mobility, balance, fall prevention, and independence.",
     who: "Older adults managing arthritis, balance concerns, or general mobility decline.",
+    tags: ["Arthritis", "Fall Prevention", "Age-Related Mobility Loss"],
   },
   {
     slug: "pediatric-physiotherapy",
@@ -58,6 +64,7 @@ export const services: Service[] = [
       "Developmental and injury-related care tailored for younger patients.",
     desc: "Developmental and injury-related physiotherapy tailored to younger patients, in a comfortable setting.",
     who: "Children with developmental delays, injuries, or postural concerns.",
+    tags: ["Developmental Delays", "Postural Issues", "Growth-Related Pain"],
   },
   {
     slug: "home-physiotherapy",
@@ -66,6 +73,7 @@ export const services: Service[] = [
     homeDesc: "Full physiotherapy sessions delivered at your home when a clinic visit isn't practical.",
     desc: "The same hands-on assessment and treatment you'd get in-clinic, brought to your home for patients who can't travel easily.",
     who: "Patients with limited mobility, post-surgical patients early in recovery, or anyone who prefers home-based care.",
+    tags: ["Limited Mobility", "Post-Surgical Care", "Elderly Patients"],
   },
   {
     slug: "knee-pain",
@@ -74,6 +82,7 @@ export const services: Service[] = [
     homeDesc: "Focused treatment for knee pain, from ligament issues to everyday wear and tear.",
     desc: "Assessment and hands-on treatment for knee pain arising from injury, arthritis, or overuse, paired with a strengthening plan.",
     who: "Anyone with persistent or recent-onset knee pain affecting movement or daily activity.",
+    tags: ["Ligament Injury", "Knee Arthritis", "Overuse Pain"],
   },
   {
     slug: "shoulder-pain",
@@ -82,5 +91,6 @@ export const services: Service[] = [
     homeDesc: "Targeted care for shoulder pain and stiffness, including impingement and rotator cuff issues.",
     desc: "Hands-on treatment and guided exercise for shoulder pain, stiffness, and impingement, aimed at restoring full pain-free movement.",
     who: "Anyone with shoulder pain, reduced range of motion, or a recurring shoulder injury.",
+    tags: ["Frozen Shoulder", "Rotator Cuff Pain", "Shoulder Impingement"],
   },
 ];

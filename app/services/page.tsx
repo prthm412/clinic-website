@@ -35,6 +35,16 @@ export default function ServicesPage() {
                 <span className="text-primary">Who it&apos;s for:</span>{" "}
                 {service.who}
               </p>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {service.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-full bg-bg-alt px-3 py-1 text-xs font-medium text-primary-dark"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
